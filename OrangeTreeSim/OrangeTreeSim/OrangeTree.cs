@@ -24,7 +24,10 @@ namespace OrangeTreeSim
             } 
             set 
             {  
-                age = value; 
+                if (value >= 0)
+                {
+                    age = value;
+                }
             } 
         }
         public int Height
