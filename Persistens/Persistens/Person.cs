@@ -81,8 +81,12 @@ namespace Persistens
             IsMarried = isMarried;
             NoOfChildren = noOfChildren;
         }
+        public string MakeTitle()
+        {
+            return Name + ";" + Convert.ToString(BirthDate) + ";" + Convert.ToString(Height) + ";" + Convert.ToString(IsMarried) + ";" + Convert.ToString(NoOfChildren);
+        }
     }
-
+    
 
     
 }
