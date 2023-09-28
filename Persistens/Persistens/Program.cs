@@ -8,7 +8,9 @@
 
             DataHandler handler = new DataHandler("Data.txt");
             handler.SavePerson(person);
+            Person newPerson = handler.LoadPerson();
 
+            Console.WriteLine(newPerson.MakeTitle());
             Console.Write("Writing Person: ");
             Console.WriteLine(person.MakeTitle());
 

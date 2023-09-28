@@ -22,10 +22,18 @@ namespace Persistens
         }
         public void SavePerson(Person person)
         {
-            string title = person.MakeTitle();
-            StreamWriter SW = new StreamWriter(dataFileName);
-            SW.WriteLine(title);
-            SW.Close();
+            StreamWriter sw = new StreamWriter(dataFileName);
+            sw.WriteLine(person.MakeTitle());
+            sw.Close();
+        }
+        public Person LoadPerson()
+        {
+            StreamReader sr = new StreamReader(dataFileName);
+            string line = sr.ReadLine();
+            sr.Close();
+            string[] splitLine = line.Split(";");
+            Person newPerson = new Person(splitLine[0], DateTime.Parse(splitLine[1]), double.Parse(splitLine[2]), bool.Parse(splitLine[3]), int.Parse(splitLine[4]));
+            return newPerson;
         }
     }
 }
