@@ -19,26 +19,27 @@ namespace Persistens
 
         private int noOfChildren;
 
-        public string Name 
-        { 
-            get 
-            { 
-                return name; 
-            } set 
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
             {
                 name = value;
-            } 
-        }
-        public DateTime BirthDate  
-        { 
-            get 
-            { 
-                return birthDate; 
             }
-            set 
-            { 
+        }
+        public DateTime BirthDate
+        {
+            get
+            {
+                return birthDate;
+            }
+            set
+            {
                 birthDate = value;
-            } 
+            }
         }
         public double Height
         {
@@ -46,20 +47,20 @@ namespace Persistens
             {
                 return height;
             }
-            set 
-            { 
-                height = value; 
+            set
+            {
+                height = value;
             }
         }
         public bool IsMarried
         {
-            get 
+            get
             {
-            return isMarried;
+                return isMarried;
             }
-            set 
-            { 
-                isMarried = value; 
+            set
+            {
+                isMarried = value;
             }
         }
         public int NoOfChildren
@@ -68,9 +69,9 @@ namespace Persistens
             {
                 return noOfChildren;
             }
-            set 
-            { 
-                noOfChildren = value; 
+            set
+            {
+                noOfChildren = value;
             }
         }
         public Person(string name, DateTime birthDate, double height, bool isMarried, int noOfChildren)
@@ -86,7 +87,4 @@ namespace Persistens
             return Name + ";" + Convert.ToString(BirthDate) + ";" + Convert.ToString(Height) + ";" + Convert.ToString(IsMarried) + ";" + Convert.ToString(NoOfChildren);
         }
     }
-    
-
-    
 }

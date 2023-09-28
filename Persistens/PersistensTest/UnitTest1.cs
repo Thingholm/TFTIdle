@@ -19,17 +19,21 @@ namespace PersistensTest
             Assert.AreEqual("Anders Andersen;24-08-1975 00:00:00;175,9;True;3", title);
         }
 
-        //[TestMethod]
-        //public void CheckDataHandlerConstructor()
-        //{
-        //    // #### ARRANGE ####
-        //    DataHandler handler = new DataHandler("Data.txt");
+        [TestMethod]
+        public void CheckDataHandlerConstructor()
+        {
+            // #### ARRANGE ####
+        DataHandler handler = new DataHandler("Data.txt");
 
         //    // #### ACT ####
 
         //    // #### ASSERT ####
-        //    Assert.AreEqual("Data.txt", handler.DataFileName);
-        //}
+        Assert.AreEqual("Data.txt", handler.DataFileName);
+        }
+
+
+
+
 
         //[TestMethod]
         //public void CheckDataHandlerSaveAndLoad()
