@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistens", "Persistens\Persistens.csproj", "{0E88181F-F00E-4AE4-90B1-93E64644052F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersistensTest", "PersistensTest\PersistensTest.csproj", "{80EAFE37-656C-41AD-A8BA-1728FF820EC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0E88181F-F00E-4AE4-90B1-93E64644052F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E88181F-F00E-4AE4-90B1-93E64644052F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E88181F-F00E-4AE4-90B1-93E64644052F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80EAFE37-656C-41AD-A8BA-1728FF820EC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80EAFE37-656C-41AD-A8BA-1728FF820EC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80EAFE37-656C-41AD-A8BA-1728FF820EC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80EAFE37-656C-41AD-A8BA-1728FF820EC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
