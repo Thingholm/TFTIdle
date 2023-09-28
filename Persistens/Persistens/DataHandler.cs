@@ -25,6 +25,7 @@ namespace Persistens
             string title = person.MakeTitle();
             StreamWriter SW = new StreamWriter(dataFileName);
             SW.WriteLine(title);
+            SW.Close();
         }
     }
 }
