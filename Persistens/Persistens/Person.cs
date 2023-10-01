@@ -7,16 +7,11 @@ using System.Threading.Tasks;
 namespace Persistens
 {
     public class Person
-
     {
         private string name;
-
         private DateTime birthDate;
-
         private double height;
-
         private bool isMarried;
-
         private int noOfChildren;
 
         public string Name

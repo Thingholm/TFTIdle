@@ -26,6 +26,15 @@ namespace Persistens
             sw.WriteLine(person.MakeTitle());
             sw.Close();
         }
+        public void SavePersons(Person[] persons)
+        {
+            StreamWriter sw = new StreamWriter(dataFileName);
+            foreach (Person person in persons)
+            {
+                sw.WriteLine(person.MakeTitle());
+            }
+            sw.Close();
+        }
         public Person LoadPerson()
         {
             StreamReader sr = new StreamReader(dataFileName);
@@ -34,6 +43,20 @@ namespace Persistens
             string[] splitLine = line.Split(";");
             Person newPerson = new Person(splitLine[0], DateTime.Parse(splitLine[1]), double.Parse(splitLine[2]), bool.Parse(splitLine[3]), int.Parse(splitLine[4]));
             return newPerson;
+        }
+        public List<Person> LoadPersons()
+        {
+            List<Person> personsList = new List<Person>();
+            string line;
+            StreamReader sr = new StreamReader(dataFileName);
+            while ((line = sr.ReadLine()) != null)
+            {
+                string[] splitLine = line.Split(";");
+                personsList.Add(new Person(splitLine[0], DateTime.Parse(splitLine[1]), double.Parse(splitLine[2]), bool.Parse(splitLine[3]), int.Parse(splitLine[4])));
+            }
+            sr.Close();
+
+            return personsList;
         }
     }
 }
