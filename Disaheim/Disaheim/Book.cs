@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,67 +8,31 @@ using System.Threading.Tasks;
 namespace Disaheim
 {
     public class Book
-
     {
-        private string itemId;
-        public string ItemId
-        {
-            get
-            {
-                return itemId;
-            }
-            set
-            {
-                itemId = value;
-            }
-        }
+        public string ItemId { get; set; }
+        public string Title { get; set; }
 
-        private string title;
-        public string Title
-        {
-            get
-            {
-                return title;
-            }
-            set
-            {
-                title = value;
-            }
-        }
+        public double Price { get; set; }
 
-        private double price;
-        public double Price
-        {
-            get
-            {
-                return price;
-            }
-            set
-            {
-                price = value;
-            }
-        }
-        public Book(string itemId, string title, double price)
-        {
-            this.itemId = itemId;
-            this.title = title;
-            this.price = price;
-        }
-
-        public Book(string itemId, string title)
-            : this(itemId, title, 0)
-        {
-        }
 
         public Book(string itemId)
-            : this(itemId, "")
         {
+            ItemId = itemId;
+        }
+
+        public Book(string itemId, string title) : this (itemId)
+        {
+            Title = title;
+        }
+        public Book(string itemId, string title, double price) : this (itemId, title)
+        {
+            Price = price;
         }
 
         public override string ToString()
         {
-            return $"ItemId: {itemId}, Title: {title}, Price: {price}";
+            return $"ItemId: {ItemId}, Title: {Title}, Price: {Price}";
         }
+    }
 
-    }
-    }
+}
