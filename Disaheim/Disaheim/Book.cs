@@ -9,8 +9,9 @@ namespace Disaheim
 {
     public class Book : Merchandise
     {
+        private double price;
         public string Title { get; set; }
-        public double Price { get; set; }
+        public double Price { get { return price; } set { price = value; } }
 
 
         public Book(string itemId)
@@ -24,12 +25,16 @@ namespace Disaheim
         }
         public Book(string itemId, string title, double price) : this (itemId, title)
         {
-            Price = price;
+            this.price = price;
         }
 
         public override string ToString()
         {
             return $"ItemId: {ItemId}, Title: {Title}, Price: {Price}";
+        }
+        public override double GetValue()
+        {
+            return price;
         }
     }
 
