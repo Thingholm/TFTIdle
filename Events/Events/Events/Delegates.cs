@@ -6,11 +6,5 @@ using System.Threading.Tasks;
 
 namespace Events
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-
-        }
-    }
+    public delegate double BonusProvider(double amount);
 }
