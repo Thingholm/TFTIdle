@@ -10,34 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for NewMovie.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class NewMovie : Window
     {
-        public MainWindow()
+        public NewMovie()
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
         }
 
-        private void New_Movie_BTN_Click(object sender, RoutedEventArgs e)
+        private void Back_BTN_Click(object sender, RoutedEventArgs e)
         {
-            NewMovie Win2 = new NewMovie();
-            Win2.Show();
-            this.Close();
-        }
-
-        private void Delete_BTN_Click(object sender, RoutedEventArgs e)
-        {
-            DeleteMovie Win3 = new DeleteMovie();
-            Win3.Show();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
             this.Close();
         }
     }

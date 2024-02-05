@@ -5,7 +5,6 @@
         static void Main(string[] args)
         {
             MoviesRepository repository = new MoviesRepository();
-            repository.ReadMovies();
         }
     }
 }

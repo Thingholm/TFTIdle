@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1080" Width="1920">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="19" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="169"/>
+        <Button x:Name="New_Movie_BTN" Content="Tilføj ny film" HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Click="New_Movie_BTN_Click" Margin="542,445,0,0" Height="50"/>
+        <Button x:Name="Delete_BTN" Content="Slet film" HorizontalAlignment="Left" VerticalAlignment="Top" Width="158" Click="Delete_BTN_Click" Margin="815,445,0,0" Height="50"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,176,0,0" TextWrapping="Wrap" Text="Film Tilføjer" VerticalAlignment="Top" Height="71" Width="268" FontSize="44"/>
 
     </Grid>
 </Window>

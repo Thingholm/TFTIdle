@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfApp1.DeleteMovie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="DeleteMovie" Height="1080" Width="1920">
+    <Grid>
+        <Button x:Name="Slet_BTN" Content="Slet" HorizontalAlignment="Left" Margin="1178,213,0,0" VerticalAlignment="Top" Width="240" Height="46"/>
+        <Button x:Name="Back_BTN" Content="Tilbage" HorizontalAlignment="Left" Margin="1178,371,0,0" VerticalAlignment="Top" Width="240" Click="Back_BTN_Click" Height="46"/>
+
+    </Grid>
+</Window>
