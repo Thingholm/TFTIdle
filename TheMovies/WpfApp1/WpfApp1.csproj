@@ -109,10 +109,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TheMovies\TheMovies.csproj">
-      <Project>{bcb30e6d-c22d-4854-bbca-9be2c4d1f6fd}</Project>
-      <Name>TheMovies</Name>
-    </ProjectReference>
+    <Resource Include="1000_F_285103410_ZxhFfvlEZ5XlP3quDZGFzZ4XGCvThmi6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="shutterstock_366274775.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

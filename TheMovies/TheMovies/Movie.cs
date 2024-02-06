@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -98,6 +99,15 @@ namespace TheMovies
             Premieredato = DateTime.Parse(csvList[7]);
             Bookingmail = csvList[8];
             Bookingtelefonnummer = int.Parse(csvList[9]);
+        }
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (PropertyInfo property in typeof(Movie).GetProperties())
+            {
+                sb.Append(property.GetValue(this, null).ToString() + ";");
+            }
+            return sb.ToString();
         }
     }
 
