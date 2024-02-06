@@ -111,5 +111,8 @@
   <ItemGroup>
     <Resource Include="1000_F_285103410_ZxhFfvlEZ5XlP3quDZGFzZ4XGCvThmi6.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="shutterstock_366274775.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
