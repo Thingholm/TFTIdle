@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="DeleteMovie" Height="1080" Width="1920">
     <Grid>
-        <Button x:Name="Slet_BTN" Content="Slet" HorizontalAlignment="Left" Margin="1178,213,0,0" VerticalAlignment="Top" Width="240" Height="46"/>
-        <Button x:Name="Back_BTN" Content="Tilbage" HorizontalAlignment="Left" Margin="1178,371,0,0" VerticalAlignment="Top" Width="240" Click="Back_BTN_Click" Height="46"/>
+        <Button x:Name="Slet_BTN" Content="Slet" HorizontalAlignment="Left" Margin="1178,213,0,0" VerticalAlignment="Top" Width="160" Height="50" FontSize="24"/>
+        <Button x:Name="Back_BTN" Content="Tilbage" HorizontalAlignment="Left" Margin="1178,371,0,0" VerticalAlignment="Top" Width="160" Click="Back_BTN_Click" Height="50" FontSize="24"/>
+        <Button x:Name="Close_BTN" Content="Afslut" HorizontalAlignment="Left" Margin="1300,98,0,0" VerticalAlignment="Top" Height=" 50" Width="160" FontSize="24" Click="Close_BTN_Click"/>
 
     </Grid>
 </Window>

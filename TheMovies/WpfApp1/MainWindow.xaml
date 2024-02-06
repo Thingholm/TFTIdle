@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920">
     <Grid>
-        <Button x:Name="New_Movie_BTN" Content="Tilføj ny film" HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Click="New_Movie_BTN_Click" Margin="542,445,0,0" Height="50"/>
-        <Button x:Name="Delete_BTN" Content="Slet film" HorizontalAlignment="Left" VerticalAlignment="Top" Width="158" Click="Delete_BTN_Click" Margin="815,445,0,0" Height="50"/>
+        <Button x:Name="New_Movie_BTN" Content="Tilføj ny film" HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Click="New_Movie_BTN_Click" Margin="542,445,0,0" Height="50" FontSize="24"/>
+        <Button x:Name="Delete_BTN" Content="Slet film" HorizontalAlignment="Left" VerticalAlignment="Top" Width="158" Click="Delete_BTN_Click" Margin="815,445,0,0" Height="50" FontSize="24"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,176,0,0" TextWrapping="Wrap" Text="Film Tilføjer" VerticalAlignment="Top" Height="71" Width="268" FontSize="44"/>
+        <Button x:Name="Close_BTN" Content="Afslut" HorizontalAlignment="Left" Margin="1300,98,0,0" VerticalAlignment="Top" Height="50" Width="158" FontSize="24" Click="Close_BTN_Click"/>
 
     </Grid>
 </Window>

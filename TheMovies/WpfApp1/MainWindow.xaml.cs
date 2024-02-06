@@ -40,5 +40,10 @@ namespace WpfApp1
             Win3.Show();
             this.Close();
         }
+
+        private void Close_BTN_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

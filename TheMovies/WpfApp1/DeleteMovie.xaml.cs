@@ -32,5 +32,10 @@ namespace WpfApp1
             mainWindow.Show();
             this.Close();
         }
+
+        private void Close_BTN_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
