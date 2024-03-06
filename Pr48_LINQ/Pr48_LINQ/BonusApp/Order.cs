@@ -64,7 +64,7 @@ namespace BonusApp
 
         public List<Product> SortProductOrderBy(Func<Product, object> keySelector)
         {
-            return _products.OrderBy(keySelector).ToList();
+            return _products.OrderBy(keySelector).ToList();1
         }
     }
 }
