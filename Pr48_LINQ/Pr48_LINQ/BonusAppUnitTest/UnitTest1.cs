@@ -15,17 +15,25 @@ namespace BonusAppUnitTest
             order.AddProduct(new Product
             {
                 Name = "Mælk",
-                Value = 10.0
+                Value = 10.0,
+                AvailableFrom = new DateTime(2018, 3, 1),
+                AvailableTo = new DateTime(2018, 3, 5)
             });
+
             order.AddProduct(new Product
             {
                 Name = "Smør",
-                Value = 15.0
+                Value = 15.0,
+                AvailableFrom = new DateTime(2018, 3, 3),
+                AvailableTo = new DateTime(2018, 3, 4)
             });
+
             order.AddProduct(new Product
             {
                 Name = "Pålæg",
-                Value = 20.0
+                Value = 20.0,
+                AvailableFrom = new DateTime(2018, 3, 4),
+                AvailableTo = new DateTime(2018, 3, 7)
             });
         }
         [TestMethod]
@@ -62,6 +70,34 @@ namespace BonusAppUnitTest
 
             order.Bonus = Bonuses.FlatTwoIfAmountMoreThanFive;
             Assert.AreEqual(43.0, order.GetTotalPrice());
+        }
+        [TestMethod]
+
+        public void GetValueOfProductsByDate_Test()
+        {
+            Assert.AreEqual(0.0, order.GetValueOfProducts(new DateTime(2018, 2, 28)));
+            Assert.AreEqual(10.0, order.GetValueOfProducts(new DateTime(2018, 3, 2)));
+            Assert.AreEqual(25.0, order.GetValueOfProducts(new DateTime(2018, 3, 3)));
+            Assert.AreEqual(45.0, order.GetValueOfProducts(new DateTime(2018, 3, 4)));
+        }
+
+        [TestMethod]
+        public void SortByAvailableToTest()
+        {
+            List<Product> result = order.SortProductOrderBy(x => x.Name);
+            Assert.AreEqual(3, result.Count);
+            Assert.AreEqual("Smør", result[2].Name);
+            Assert.AreEqual("Mælk", result[0].Name);
+            Assert.AreEqual("Pålæg", result[1].Name);
+        }
+
+        [TestMethod]
+        public void GetTotalPriceByDate_Test()
+        {
+            Assert.AreEqual(0.0, order.GetTotalPrice(new DateTime(2018, 2, 28), (price) => price * 0.2));
+            Assert.AreEqual(8.0, order.GetTotalPrice(new DateTime(2018, 3, 2), (price) => price * 0.2));
+            Assert.AreEqual(20.0, order.GetTotalPrice(new DateTime(2018, 3, 3), (price) => price * 0.2));
+            Assert.AreEqual(36.0, order.GetTotalPrice(new DateTime(2018, 3, 4), (price) => price * 0.2));
         }
     }
 }
