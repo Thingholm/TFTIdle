@@ -25,6 +25,12 @@ namespace WpfApp1
             InitializeComponent();
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
+
+            var viewModel = new ViewModel();
+            viewModel. = "";
+
+            DataContext = viewModel;
+            InitializeComponent();
         }
 
         private void New_Movie_BTN_Click(object sender, RoutedEventArgs e)
@@ -45,5 +51,14 @@ namespace WpfApp1
         {
             this.Close();
         }
+
+
+        //public void UpdateTextBoxes(string biotext, string citytext, string Showtext, string titletext, string genretext, string timetext, string instructortext, string premdatetext, string bookingtext, string mailtext, string tlfnrtext)
+        //{
+        //    result1_txtb = $"{biotext}{citytext}{Showtext}{titletext}{genretext}{timetext}{instructortext}{premdatetext}{bookingtext}{mailtext}{tlfnrtext}";
+        //}
+
+
+
     }
 }
