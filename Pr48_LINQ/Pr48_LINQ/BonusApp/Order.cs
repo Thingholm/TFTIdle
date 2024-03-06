@@ -18,12 +18,7 @@ namespace BonusApp
 
         public double GetValueOfProducts()
         {
-            double valueOfProducts = 0;
-            foreach (Product product in _products)
-            {
-                valueOfProducts += product.Value;
-            }
-            return valueOfProducts;
+            return _products.Sum(product => product.Value);
         }
 
         public double GetBonus()
